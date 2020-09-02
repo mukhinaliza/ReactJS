@@ -1,5 +1,7 @@
 import React from 'react';
 import  {client_id, client_secret,  redirect_uri, authLink} from '../config';
+import Header from '../Header.js';
+
 
 export default class AuthSpotify extends React.Component {
 	constructor() {
@@ -47,7 +49,7 @@ componentDidMount() {
             <h1>Welcome to Spotify</h1> 
             {this.state.accessToken
             ?
-            <p>Succesful</p>
+              <Header />
             : <a href={authLink}> LOG IN</a>
             }
             </>  
